@@ -667,7 +667,7 @@ abstract class JustTheTooltipState<T> extends State<JustTheInterface>
       behavior: barrierDismissible
           ? HitTestBehavior.translucent
           : HitTestBehavior.deferToChild,
-      onTap: _hideTooltip,
+      onTap: () => _hideTooltip(immediately: true),
       child: Container(color: barrierColor),
     );
   }
